@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { projectsData } from '../../data/projects';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { projectsData, minorProjectsData } from '../../data/projects';
+import { FiGithub, FiExternalLink, FiFolder } from 'react-icons/fi';
 
 export const Projects = () => {
   return (
@@ -89,6 +89,52 @@ export const Projects = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+          
+          <div className="mt-24">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 flex items-center gap-4">
+              <span className="w-8 h-1 bg-indigo-500 rounded-full"></span>
+              Other Noteworthy Projects
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {minorProjectsData.map((project, idx) => (
+                <motion.div 
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="glass-card p-6 rounded-2xl flex flex-col h-full group"
+                >
+                  <div className="flex justify-between items-start mb-6">
+                    <FiFolder size={32} className="text-indigo-500 group-hover:text-indigo-400 transition-colors" />
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors p-2">
+                      <FiGithub size={20} />
+                    </a>
+                  </div>
+                  
+                  <h4 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                    {project.title}
+                  </h4>
+                  
+                  <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                    {project.description}
+                  </p>
+                  
+                  <div className="mt-6 flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-700/50">
+                    <span className="text-xs font-bold px-2 py-1 bg-indigo-500/10 rounded text-indigo-400 mr-2">
+                      {project.date}
+                    </span>
+                    {project.technologies.map((tech, tIdx) => (
+                      <span key={tIdx} className="text-xs font-mono text-slate-500 px-1 py-1">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
