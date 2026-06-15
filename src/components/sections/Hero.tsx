@@ -59,7 +59,7 @@ export const Hero = () => {
             <a href={socialsData.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <FiLinkedin size={24} />
             </a>
-            <a href={`mailto:${personalData.email}`} className="text-slate-400 hover:text-white transition-colors">
+            <a href={`mailto:${personalData.email}`} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <FiMail size={24} />
             </a>
             <div className="h-px bg-slate-700 flex-1"></div>

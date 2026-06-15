@@ -21,7 +21,7 @@ export const Footer = () => {
           <a href={socialsData.linkedin} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 hover:bg-indigo-600 rounded-full text-slate-300 hover:text-white transition-all transform hover:-translate-y-1">
             <FiLinkedin size={20} />
           </a>
-          <a href={`mailto:${personalData.email}`} className="p-3 bg-slate-800 hover:bg-indigo-600 rounded-full text-slate-300 hover:text-white transition-all transform hover:-translate-y-1">
+          <a href={`mailto:${personalData.email}`} target="_blank" rel="noopener noreferrer" className="p-3 bg-slate-800 hover:bg-indigo-600 rounded-full text-slate-300 hover:text-white transition-all transform hover:-translate-y-1">
             <FiMail size={20} />
           </a>
         </div>

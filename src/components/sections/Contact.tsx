@@ -25,7 +25,7 @@ export const Contact = () => {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <a href={`mailto:${personalData.email}`} className="glass-card p-8 rounded-2xl flex flex-col items-center gap-4 hover:-translate-y-2 transition-transform duration-300 group">
+            <a href={`mailto:${personalData.email}`} target="_blank" rel="noopener noreferrer" className="glass-card p-8 rounded-2xl flex flex-col items-center gap-4 hover:-translate-y-2 transition-transform duration-300 group">
               <div className="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <FiMail size={28} />
               </div>
@@ -60,6 +60,8 @@ export const Contact = () => {
           <div className="mt-16">
             <a 
               href={`mailto:${personalData.email}`} 
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-10 py-5 bg-transparent border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white rounded-lg font-medium transition-all text-lg cursor-pointer"
             >
               Say Hello
