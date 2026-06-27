@@ -4,7 +4,7 @@ A premium, modern, and fully responsive single-page personal portfolio website b
 
 ## 🚀 Live Demo
 
-[https://portfolio-liard-omega-36k9p814kv.vercel.app/](https://portfolio-liard-omega-36k9p814kv.vercel.app/)
+[https://abhijith-portfolio.xyz/](https://abhijith-portfolio.xyz/)
 
 ## 🛠️ Technology Stack
 
